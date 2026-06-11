@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenEternalDragon - Armado y Optimización de PC Gamer</title>
+    <style>
+        :root {
+            --bg-principal: #0b0f12;
+            --bg-secundario: #12181b;
+            --verde-dragon: #2ecc71;
+            --verde-oscuro: #1b4d3e;
+            --texto-blanco: #ffffff;
+            --texto-gris: #a0aec0;
+            --neon-glow: #00ff87;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-principal);
+            color: var(--texto-blanco);
+            line-height: 1.6;
+        }
+
+        /* Barra de Navegación */
+        header {
+            background-color: rgba(18, 24, 27, 0.95);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid var(--verde-oscuro);
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--neon-glow);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            color: var(--texto-blanco);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: var(--verde-dragon);
+        }
+
+        /* Sección Hero */
+        .hero {
+            background: linear-gradient(rgba(11, 15, 18, 0.7), rgba(11, 15, 18, 0.9)), 
+                        url('https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: var(--texto-blanco);
+            text-shadow: 0 0 10px var(--verde-dragon);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            color: var(--texto-gris);
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            background: linear-gradient(45deg, var(--verde-oscuro), var(--verde-dragon));
+            color: white;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 15px var(--neon-glow);
+        }
+
+        /* Contenedor General de Secciones */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--verde-dragon);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Sección Quiénes Somos (Misión y Visión) */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            color: var(--neon-glow);
+            margin-bottom: 0.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .about-img img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(46, 204, 113, 0.2);
+        }
+
+        /* Sección de Tarjetas (Productos y Características) */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background-color: var(--bg-secundario);
+            padding: 2.5rem 2rem;
+            border-radius: 10px;
+            border: 1px solid #232d32;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--verde-dragon);
+        }
+
+        .feature-card h3 {
+            color: var(--neon-glow);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .feature-card .product-price {
+            display: block;
+            margin-top: 1rem;
+            font-weight: bold;
+            color: var(--neon-glow);
+        }
+
+        /* Sección Valores */
+        .valores-list {
+            background-color: var(--bg-secundario);
+            padding: 3rem;
+            border-radius: 10px;
+            border-left: 5px solid var(--verde-dragon);
+        }
+
+        .val-item {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #232d32;
+        }
+
+        .val-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .val-item strong {
+            color: var(--neon-glow);
+            font-size: 1.2rem;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        /* Sección Tabla de Presupuestos */
+        .table-responsive {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: var(--bg-secundario);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 1rem;
+        }
+
+        th, td {
+            padding: 1rem 1.5rem;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--verde-oscuro);
+            color: var(--texto-blanco);
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        tr {
+            border-bottom: 1px solid #232d32;
+        }
+
+        tr:last-child {
+            border-bottom: none;
+        }
+
+        tr:hover {
+            background-color: rgba(46, 204, 113, 0.05);
+        }
+
+        .price {
+            font-weight: bold;
+            color: var(--neon-glow);
+        }
+
+        /* Sección Contacto y Redes Sociales */
+        .contacto-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            background-color: var(--bg-secundario);
+            padding: 3rem;
+            border-radius: 10px;
+            border: 1px solid #232d32;
+        }
+
+        .contacto-info h3, .redes-info h3 {
+            color: var(--neon-glow);
+            margin-bottom: 1rem;
+        }
+
+        .contacto-info p, .redes-info p {
+            margin-bottom: 0.5rem;
+        }
+
+        .social-link {
+            display: inline-block;
+            margin-right: 15px;
+            color: var(--verde-dragon);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .social-link:hover {
+            color: var(--neon-glow);
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .about-grid, .contacto-container {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .nav-menu {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                🐉 GreenEternalDragon
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#quienes-somos">Quiénes Somos</a></li>
+                <li><a href="#valores">Valores</a></li>
+                <li><a href="#productos">Productos y Servicios</a></li>
+                <li><a href="#precios">Presupuestos de Hardware</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <h1>GREEN ETERNAL DRAGON</h1>
+        <p>Expertos en el diseño, armado y optimización de computadores Gamer de alto rendimiento.</p>
+        <a href="#productos" class="btn">Explorar Servicios</a>
+    </section>
+
+    <section id="quienes-somos" class="container">
+        <h2>Quiénes Somos</h2>
+        <div class="about-grid">
+            <div class="about-text">
+                <h3>Nuestra Empresa</h3>
+                <p>Somos una empresa dedicada a potenciar la experiencia de la comunidad gamer y profesional. Nos especializamos en seleccionar de manera rigurosa y experta cada componente para asegurar setups balanceados, estéticos y potentes.</p>
+                
+                <h3>Misión</h3>
+                <p>Nuestra misión es ofrecer tecnología de vanguardia y servicios de armado personalizado para ayudar a los jugadores y creadores de contenido a maximizar su rendimiento tecnológico sin pagar de más.</p>
+                
+                <h3>Visión</h3>
+                <p>Convertirnos para el año 2030 en la tienda líder en optimización de hardware a nivel nacional, siendo reconocidos por nuestra total transparencia, soporte al cliente y ensambles sin cuellos de botella.</p>
+            </div>
+            <div class="about-img">
+                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80" alt="Taller de Armado GreenEternalDragon">
+            </div>
+        </div>
+    </section>
+
+    <section id="valores" style="background-color: #0e1417;">
+        <div class="container">
+            <h2>Nuestros Valores Corporativos</h2>
+            <div class="valores-list">
+                <div class="val-item">
+                    <strong>1.- Respeto Comercial y Honestidad</strong>
+                    <p>Respetamos cada cotización y precio ofertado de manera transparente a nuestros clientes.</p>
+                </div>
+                <div class="val-item">
+                    <strong>2.- Innovación y Optimización</strong>
+                    <p>Nos mantenemos al día con las últimas actualizaciones de hardware para evitar fallas o cuellos de botella.</p>
+                </div>
+                <div class="val-item">
+                    <strong>3.- Compromiso y Garantía</strong>
+                    <p>Garantizamos el respaldo total de nuestros armados ante cualquier falla técnica o de fábrica.</p>
+                </div>
+                <div class="val-item">
+                    <strong>4.- Cobertura Logística Eficiente</strong>
+                    <p>Aseguramos despachos rápidos, seguros y con embalaje de alta protección a todo el país.</p>
+                </div>
+                <div class="val-item">
+                    <strong>5.- Asesoría Personalizada</strong>
+                    <p>Acompañamos al usuario durante todo el proceso de elección según su presupuesto disponible.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="productos" class="container">
+        <h2>Nuestros Productos y Servicios</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>1. Armado Personalizado</h3>
+                <p>Ensamblaje profesional de componentes con una gestión de cableado impecable para optimizar el flujo de aire y la estética.</p>
+                <span class="product-price">Desde $45.000 CLP</span>
+            </div>
+            <div class="feature-card">
+                <h3>2. Optimización de Software</h3>
+                <p>Configuración de BIOS, actualización de drivers y Overclocking seguro para exprimir cada FPS en tus videojuegos favoritos.</p>
+                <span class="product-price">Desde $25.000 CLP</span>
+            </div>
+            <div class="feature-card">
+                <h3>3. Pack Mantenimiento Pro</h3>
+                <p>Limpieza profunda de componentes, filtros de polvo y cambio de pasta térmica de alto rendimiento (Artic MX-6 o metal líquido).</p>
+                <span class="product-price">Desde $35.000 CLP</span>
+            </div>
+            <div class="feature-card">
+                <h3>4. Asesoría de Componentes</h3>
+                <p>Análisis completo de piezas para evitar cuellos de botella antes de que gastes tu dinero de manera incorrecta.</p>
+                <span class="product-price">¡Gratis con tu armado!</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="precios" style="background-color: #0e1417;">
+        <div class="container">
+            <h2>Precios Base de Componentes Disponibles</h2>
+            <p style="text-align: center; margin-top: -2rem; margin-bottom: 2rem; color: var(--texto-gris);">Valores aproximados en nuestro stock comercial (Sujetos a cambios según distribución).</p>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Elemento del Hardware</th>
+                            <th>Línea Recomendada</th>
+                            <th>Precio Aprox. (CLP)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Almacenamiento</td>
+                            <td>SSD M.2 NVMe High Speed</td>
+                            <td class="price">100.000 CLP</td>
+                        </tr>
+                        <tr>
+                            <td>Memoria RAM</td>
+                            <td>Módulos RAM DDR4/DDR5 (Dual Channel)</td>
+                            <td class="price">120.000 CLP</td>
+                        </tr>
+                        <tr>
+                            <td>Gabinete</td>
+                            <td>Chasis Gamer ATX con Mesh Frontal</td>
+                            <td class="price">90.000 CLP</td>
+                        </tr>
+                        <tr>
+                            <td>Procesador</td>
+                            <td>CPU Última Generación (Intel/AMD)</td>
+                            <td class="price">160.000 CLP</td>
+                        </tr>
+                        <tr>
+                            <td>Placa Madre</td>
+                            <td>Motherboard Serie B / Z Optimizada</td>
+                            <td class="price">130.000 CLP</td>
+                        </tr>
+                        <tr>
+                            <td>Tarjeta Gráfica</td>
+                            <td>GPU Dedicada (Ray Tracing Ready)</td>
+                            <td class="price">450.000 CLP</td>
+                        </tr>
+                        <tr>
+                            <td>Fuente de Poder</td>
+                            <td>Certificada 80 Plus Gold Eficiente</td>
+                            <td class="price">57.000 CLP</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="container">
+        <h2>Contacto y Redes Sociales</h2>
+        <div class="contacto-container">
+            <div class="contacto-info">
+                <h3>Información de Contacto</h3>
+                <p>📍 <strong>Dirección Principal:</strong> Av. San Juan, Machalí, Chile</p>
+                <p>📞 <strong>Teléfono de Soporte:</strong> +56 9 1034 6844</p>
+                <p>📧 <strong>Correo Corporativo:</strong> GreenEternalDragon@gmail.com</p>
+                <p>⏰ <strong>Horario de Atención:</strong> Lunes a Viernes de 09:00 a 18:00 hrs.</p>
+            </div>
+            <div class="redes-info">
+                <h3>Síguenos en Redes Sociales</h3>
+                <p>Mantente al tanto de nuestros últimos proyectos de armado, sorteos y ofertas especiales:</p>
+                <br>
+                <a href="https://instagram.com/GreenEternalDragon" target="_blank" class="social-link">📸 Instagram</a>
+                <a href="https://facebook.com/GreenEternalDragon" target="_blank" class="social-link">📘 Facebook</a>
+                <a href="https://tiktok.com/@GreenEternalDragon" target="_blank" class="social-link">🎵 TikTok</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p><strong>GreenEternalDragon</strong> &copy; 2026. Todos los derechos reservados.</p>
+        <p>Proyecto desarrollado para el Electivo de Programación - Colegio Nahuelcura, Machalí.</p>
+    </footer>
+
+</body>
+</html>
