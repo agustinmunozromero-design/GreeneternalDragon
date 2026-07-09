@@ -20,7 +20,6 @@
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            scroll-behavior: smooth;
         }
 
         body {
@@ -105,12 +104,11 @@
             color: white;
             padding: 0.8rem 2rem;
             border: none;
-            border-radius: 50px;
+            border-radius: 5px;
             font-size: 1.1rem;
             cursor: pointer;
             text-decoration: none;
             transition: transform 0.3s, box-shadow 0.3s;
-            display: inline-block;
         }
 
         .btn:hover {
@@ -194,44 +192,6 @@
             margin-top: 1rem;
             font-weight: bold;
             color: var(--neon-glow);
-        }
-
-        /* Los 4 Pilares Técnicos */
-        .pilares-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .pilar-card {
-            background-color: var(--bg-secundario);
-            padding: 1.5rem;
-            border-radius: 8px;
-            border-top: 3px solid var(--verde-dragon);
-        }
-
-        .pilar-card h4 {
-            color: var(--neon-glow);
-            margin-bottom: 0.5rem;
-            font-size: 1.2rem;
-        }
-
-        /* Bloque de Estadísticas */
-        .stats-banner {
-            background: linear-gradient(135deg, var(--bg-secundario) 0%, var(--verde-oscuro) 100%);
-            border: 1px solid var(--verde-dragon);
-            border-radius: 10px;
-            padding: 3rem 2rem;
-            text-align: center;
-            margin-top: 3rem;
-        }
-
-        .stats-banner h3 {
-            font-size: 3rem;
-            color: var(--neon-glow);
-            font-weight: 800;
-            margin-bottom: 0.5rem;
         }
 
         /* Sección Valores */
@@ -338,57 +298,6 @@
             text-decoration: underline;
         }
 
-        /* ESTILOS DEL BOTÓN FLOTANTE DE WHATSAPP */
-        .whatsapp-btn {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background-color: #25d366;
-            color: white;
-            border-radius: 50px;
-            padding: 15px 25px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            text-decoration: none;
-            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            z-index: 9999;
-            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.3s;
-        }
-
-        .whatsapp-btn:hover {
-            transform: scale(1.06) translateY(-3px);
-            background-color: #20ba5a;
-        }
-
-        .whatsapp-icon {
-            width: 24px;
-            height: 24px;
-            fill: currentColor;
-        }
-
-        /* LOGO FLOTANTE EXTRA (Opcional, dragón animado al lado opuesto) */
-        .dragon-float {
-            position: fixed;
-            bottom: 35px;
-            left: 30px;
-            font-size: 2rem;
-            background-color: rgba(18, 24, 27, 0.8);
-            padding: 10px;
-            border-radius: 50%;
-            border: 1px solid var(--verde-dragon);
-            z-index: 9999;
-            animation: floating 3s ease-in-out infinite;
-        }
-
-        @keyframes floating {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
-        }
-
         @media (max-width: 768px) {
             .about-grid, .contacto-container {
                 grid-template-columns: 1fr;
@@ -399,22 +308,10 @@
             .nav-menu {
                 display: none;
             }
-            .whatsapp-btn span {
-                display: none; /* En celular se comprime a solo el icono */
-            }
-            .whatsapp-btn {
-                padding: 15px;
-                border-radius: 50%;
-            }
-            .dragon-float {
-                display: none;
-            }
         }
     </style>
 </head>
 <body>
-
-    <div class="dragon-float">🐉</div>
 
     <header>
         <nav class="navbar">
@@ -509,28 +406,88 @@
                 <span class="product-price">¡Gratis con tu armado!</span>
             </div>
         </div>
+    </section>
 
-        <h3 style="text-align: center; margin-top: 5rem; margin-bottom: 2rem; color: var(--neon-glow);">Los 4 Imprescindibles de GreenEternalDragon</h3>
-        <div class="pilares-grid">
-            <div class="pilar-card">
-                <h4>Buena Combinación</h4>
-                <p>Evitamos el cuello de botella seleccionando procesadores y tarjetas gráficas equivalentes en potencia.</p>
-            </div>
-            <div class="pilar-card">
-                <h4>Gabinete Amplio</h4>
-                <p>Garantizamos espacio suficiente para la refrigeración y futuras actualizaciones de hardware.</p>
-            </div>
-            <div class="pilar-card">
-                <h4>Partes Económicas</h4>
-                <p>Buscamos ofertas inteligentes para maximizar el presupuesto sin sacrificar la durabilidad.</p>
-            </div>
-            <div class="pilar-card">
-                <h4>Cableado Ordenado</h4>
-                <p>Crucial para el correcto flujo interno de aire y para lucir un setup impecable.</p>
+    <section id="precios" style="background-color: #0e1417;">
+        <div class="container">
+            <h2>Precios Base de Componentes Disponibles</h2>
+            <p style="text-align: center; margin-top: -2rem; margin-bottom: 2rem; color: var(--texto-gris);">Valores aproximados en nuestro stock comercial (Sujetos a cambios según distribución).</p>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Elemento del Hardware</th>
+                            <th>Línea Recomendada</th>
+                            <th>Precio Aprox. (CLP)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Almacenamiento</td>
+                            <td>SSD M.2 NVMe High Speed</td>
+                            <td class="price">100.000 CLP</td>
+                        </tr>
+                        <tr>
+                            <td>Memoria RAM</td>
+                            <td>Módulos RAM DDR4/DDR5 (Dual Channel)</td>
+                            <td class="price">120.000 CLP</td>
+                        </tr>
+                        <tr>
+                            <td>Gabinete</td>
+                            <td>Chasis Gamer ATX con Mesh Frontal</td>
+                            <td class="price">90.000 CLP</td>
+                        </tr>
+                        <tr>
+                            <td>Procesador</td>
+                            <td>CPU Última Generación (Intel/AMD)</td>
+                            <td class="price">160.000 CLP</td>
+                        </tr>
+                        <tr>
+                            <td>Placa Madre</td>
+                            <td>Motherboard Serie B / Z Optimizada</td>
+                            <td class="price">130.000 CLP</td>
+                        </tr>
+                        <tr>
+                            <td>Tarjeta Gráfica</td>
+                            <td>GPU Dedicada (Ray Tracing Ready)</td>
+                            <td class="price">450.000 CLP</td>
+                        </tr>
+                        <tr>
+                            <td>Fuente de Poder</td>
+                            <td>Certificada 80 Plus Gold Eficiente</td>
+                            <td class="price">57.000 CLP</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
+    </section>
 
-        <div class="stats-banner">
-            <h3>68%</h3>
-            <p style="font-size: 1.3rem; font-weight: 600; color: white;">De los jugadores aseguran que un hardware optimizado mejora drásticamente su experiencia competitiva.</p>
-            <p
+    <section id="contacto" class="container">
+        <h2>Contacto y Redes Sociales</h2>
+        <div class="contacto-container">
+            <div class="contacto-info">
+                <h3>Información de Contacto</h3>
+                <p>📍 <strong>Dirección Principal:</strong> Av. San Juan, Machalí, Chile</p>
+                <p>📞 <strong>Teléfono de Soporte:</strong> +56 9 1034 6844</p>
+                <p>📧 <strong>Correo Corporativo:</strong> GreenEternalDragon@gmail.com</p>
+                <p>⏰ <strong>Horario de Atención:</strong> Lunes a Viernes de 09:00 a 18:00 hrs.</p>
+            </div>
+            <div class="redes-info">
+                <h3>Síguenos en Redes Sociales</h3>
+                <p>Mantente al tanto de nuestros últimos proyectos de armado, sorteos y ofertas especiales:</p>
+                <br>
+                <a href="https://instagram.com/GreenEternalDragon" target="_blank" class="social-link">📸 Instagram</a>
+                <a href="https://facebook.com/GreenEternalDragon" target="_blank" class="social-link">📘 Facebook</a>
+                <a href="https://tiktok.com/@GreenEternalDragon" target="_blank" class="social-link">🎵 TikTok</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p><strong>GreenEternalDragon</strong> &copy; 2026. Todos los derechos reservados.</p>
+        <p>Proyecto desarrollado para el Electivo de Programación - Colegio Nahuelcura, Machalí.</p>
+    </footer>
+
+</body>
+</html>
