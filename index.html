@@ -14,20 +14,17 @@
             --texto-gris: #a0aec0;
             --neon-glow: #00ff87;
         }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-
         body {
             background-color: var(--bg-principal);
             color: var(--texto-blanco);
             line-height: 1.6;
         }
-
         /* Barra de Navegación */
         header {
             background-color: rgba(18, 24, 27, 0.95);
@@ -36,7 +33,6 @@
             z-index: 1000;
             border-bottom: 2px solid var(--verde-oscuro);
         }
-
         .navbar {
             max-width: 1200px;
             margin: 0 auto;
@@ -45,7 +41,6 @@
             align-items: center;
             padding: 1rem 2rem;
         }
-
         .logo {
             font-size: 1.5rem;
             font-weight: bold;
@@ -54,24 +49,20 @@
             align-items: center;
             gap: 10px;
         }
-
         .nav-menu {
             display: flex;
             list-style: none;
             gap: 2rem;
         }
-
         .nav-menu a {
             color: var(--texto-blanco);
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s;
         }
-
         .nav-menu a:hover {
             color: var(--verde-dragon);
         }
-
         /* Sección Hero */
         .hero {
             background: linear-gradient(rgba(11, 15, 18, 0.7), rgba(11, 15, 18, 0.9)), 
@@ -84,21 +75,18 @@
             text-align: center;
             padding: 0 2rem;
         }
-
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 1rem;
             color: var(--texto-blanco);
             text-shadow: 0 0 10px var(--verde-dragon);
         }
-
         .hero p {
             font-size: 1.5rem;
             max-width: 800px;
             color: var(--texto-gris);
             margin-bottom: 2rem;
         }
-
         .btn {
             background: linear-gradient(45deg, var(--verde-oscuro), var(--verde-dragon));
             color: white;
@@ -110,26 +98,22 @@
             text-decoration: none;
             transition: transform 0.3s, box-shadow 0.3s;
         }
-
         .btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 0 15px var(--neon-glow);
         }
-
         /* Contenedor General de Secciones */
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 5rem 2rem;
         }
-
         h2 {
             font-size: 2.5rem;
             text-align: center;
             margin-bottom: 3rem;
             position: relative;
         }
-
         h2::after {
             content: '';
             display: block;
@@ -139,7 +123,6 @@
             margin: 10px auto 0;
             border-radius: 2px;
         }
-
         /* Sección Quiénes Somos (Misión y Visión) */
         .about-grid {
             display: grid;
@@ -147,27 +130,23 @@
             gap: 4rem;
             align-items: center;
         }
-
         .about-text h3 {
             font-size: 1.8rem;
             color: var(--neon-glow);
             margin-bottom: 0.5rem;
             margin-top: 1.5rem;
         }
-
         .about-img img {
             width: 100%;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(46, 204, 113, 0.2);
         }
-
         /* Sección de Tarjetas (Productos y Características) */
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
         }
-
         .feature-card {
             background-color: var(--bg-secundario);
             padding: 2.5rem 2rem;
@@ -175,25 +154,21 @@
             border: 1px solid #232d32;
             transition: transform 0.3s, border-color 0.3s;
         }
-
         .feature-card:hover {
             transform: translateY(-5px);
             border-color: var(--verde-dragon);
         }
-
         .feature-card h3 {
             color: var(--neon-glow);
             margin-bottom: 1rem;
             font-size: 1.4rem;
         }
-
         .feature-card .product-price {
             display: block;
             margin-top: 1rem;
             font-weight: bold;
             color: var(--neon-glow);
         }
-
         /* Sección Valores */
         .valores-list {
             background-color: var(--bg-secundario);
@@ -201,31 +176,26 @@
             border-radius: 10px;
             border-left: 5px solid var(--verde-dragon);
         }
-
         .val-item {
             margin-bottom: 1.5rem;
             padding-bottom: 1.5rem;
             border-bottom: 1px solid #232d32;
         }
-
         .val-item:last-child {
             margin-bottom: 0;
             padding-bottom: 0;
             border-bottom: none;
         }
-
         .val-item strong {
             color: var(--neon-glow);
             font-size: 1.2rem;
             display: block;
             margin-bottom: 0.3rem;
         }
-
         /* Sección Tabla de Presupuestos */
         .table-responsive {
             overflow-x: auto;
         }
-
         table {
             width: 100%;
             border-collapse: collapse;
@@ -234,12 +204,10 @@
             overflow: hidden;
             margin-top: 1rem;
         }
-
         th, td {
             padding: 1rem 1.5rem;
             text-align: left;
         }
-
         th {
             background-color: var(--verde-oscuro);
             color: var(--texto-blanco);
@@ -247,24 +215,19 @@
             font-size: 0.9rem;
             letter-spacing: 1px;
         }
-
         tr {
             border-bottom: 1px solid #232d32;
         }
-
         tr:last-child {
             border-bottom: none;
         }
-
         tr:hover {
             background-color: rgba(46, 204, 113, 0.05);
         }
-
         .price {
             font-weight: bold;
             color: var(--neon-glow);
         }
-
         /* Sección Contacto y Redes Sociales */
         .contacto-container {
             display: grid;
@@ -275,16 +238,13 @@
             border-radius: 10px;
             border: 1px solid #232d32;
         }
-
         .contacto-info h3, .redes-info h3 {
             color: var(--neon-glow);
             margin-bottom: 1rem;
         }
-
         .contacto-info p, .redes-info p {
             margin-bottom: 0.5rem;
         }
-
         .social-link {
             display: inline-block;
             margin-right: 15px;
@@ -292,12 +252,10 @@
             text-decoration: none;
             font-weight: bold;
         }
-
         .social-link:hover {
             color: var(--neon-glow);
             text-decoration: underline;
         }
-
         @media (max-width: 768px) {
             .about-grid, .contacto-container {
                 grid-template-columns: 1fr;
@@ -312,7 +270,6 @@
     </style>
 </head>
 <body>
-
     <header>
         <nav class="navbar">
             <div class="logo">
@@ -334,14 +291,12 @@
         <p>Expertos en el diseño, armado y optimización de computadores Gamer de alto rendimiento.</p>
         <a href="#productos" class="btn">Explorar Servicios</a>
     </section>
-
     <section id="quienes-somos" class="container">
         <h2>Quiénes Somos</h2>
         <div class="about-grid">
             <div class="about-text">
                 <h3>Nuestra Empresa</h3>
-                <p>Somos una empresa dedicada a potenciar la experiencia de la comunidad gamer y profesional. Nos especializamos en seleccionar de manera rigurosa y experta cada componente para asegurar setups balanceados, estéticos y potentes.</p>
-                
+                <p>Somos una empresa dedicada a potenciar la experiencia de la comunidad gamer y profesional. Nos especializamos en seleccionar de manera rigurosa y experta cada componente para asegurar setups balanceados, estéticos y potentes.</p>  
                 <h3>Misión</h3>
                 <p>Nuestra misión es ofrecer tecnología de vanguardia y servicios de armado personalizado para ayudar a los jugadores y creadores de contenido a maximizar su rendimiento tecnológico sin pagar de más.</p>
                 
