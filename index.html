@@ -1,528 +1,536 @@
-/* Paleta de Colores: Cyberpunk / Carbono / Verde Esmeralda */
-:root {
-    --bg-principal: #0a0d10;
-    --bg-secundario: #11161b;
-    --bg-tarjetas: #171e26;
-    --verde-gamer: #00ff88;
-    --verde-hover: #00cc6c;
-    --texto-blanco: #ffffff;
-    --texto-gris: #a0aec0;
-    --borde: #24303c;
-    --transicion: all 0.3s ease;
-}
-
-/* Reset General */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    scroll-behavior: smooth;
-}
-
-body {
-    background-color: var(--bg-principal);
-    color: var(--texto-blanco);
-    overflow-x: hidden;
-}
-
-/* Contenedor Estándar */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 5rem 2rem;
-}
-
-.dark-bg {
-    background-color: var(--bg-secundario);
-    border-top: 1px solid var(--borde);
-    border-bottom: 1px solid var(--borde);
-}
-
-/* Header Estilo Flotante / Premium */
-header {
-    background-color: rgba(17, 22, 27, 0.95);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--borde);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.2rem 4rem;
-}
-
-header .logo {
-    font-size: 1.6rem;
-    font-weight: 800;
-    letter-spacing: 1px;
-    color: var(--texto-blanco);
-}
-
-header .logo i {
-    color: var(--verde-gamer);
-    margin-right: 8px;
-}
-
-header .logo span {
-    color: var(--verde-gamer);
-}
-
-nav a {
-    color: var(--texto-gris);
-    text-decoration: none;
-    font-weight: 600;
-    margin-left: 2rem;
-    font-size: 0.95rem;
-    transition: var(--transicion);
-}
-
-nav a:hover {
-    color: var(--verde-gamer);
-}
-
-nav a i {
-    margin-right: 4px;
-    font-size: 0.85rem;
-}
-
-.btn-nav {
-    background-color: transparent;
-    border: 2px solid var(--verde-gamer);
-    color: var(--verde-gamer) !important;
-    padding: 0.5rem 1.2rem;
-    border-radius: 4px;
-}
-
-.btn-nav:hover {
-    background-color: var(--verde-gamer);
-    color: var(--bg-principal) !important;
-}
-
-/* Títulos de Sección Uniformes */
-.section-title {
-    text-align: center;
-    margin-bottom: 3.5rem;
-}
-
-.section-title span {
-    color: var(--verde-gamer);
-    text-transform: uppercase;
-    font-size: 0.85rem;
-    letter-spacing: 2px;
-    font-weight: 700;
-}
-
-.section-title h3 {
-    font-size: 2.3rem;
-    margin-top: 0.5rem;
-    font-weight: 700;
-}
-
-.section-title .line {
-    width: 60px;
-    height: 4px;
-    background-color: var(--verde-gamer);
-    margin: 10px auto 0;
-    border-radius: 2px;
-}
-
-/* Hero Section (Bienvenida de alto impacto) */
-.hero {
-    background: linear-gradient(135deg, rgba(10, 13, 16, 0.95) 40%, rgba(0, 255, 136, 0.08) 100%), url('https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=1920&q=80');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    padding-left: 4rem;
-    border-bottom: 1px solid var(--borde);
-}
-
-.hero-content {
-    max-width: 700px;
-}
-
-.hero-content .badge {
-    background-color: rgba(0, 255, 136, 0.1);
-    color: var(--verde-gamer);
-    padding: 0.4rem 1rem;
-    border-radius: 50px;
-    font-weight: 700;
-    font-size: 0.85rem;
-    border: 1px solid rgba(0, 255, 136, 0.2);
-}
-
-.hero-content h2 {
-    font-size: 3.5rem;
-    line-height: 1.2;
-    margin: 1.5rem 0;
-    font-weight: 800;
-}
-
-.hero-content h2 span {
-    color: var(--verde-gamer);
-    text-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
-}
-
-.hero-content p {
-    color: var(--texto-gris);
-    font-size: 1.2rem;
-    margin-bottom: 2.5rem;
-    line-height: 1.7;
-}
-
-.btn-primary {
-    background-color: var(--verde-gamer);
-    color: var(--bg-principal);
-    padding: 0.9rem 2rem;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: 700;
-    margin-right: 1rem;
-    transition: var(--transicion);
-    box-shadow: 0 4px 15px rgba(0, 255, 136, 0.2);
-}
-
-.btn-primary:hover {
-    background-color: var(--verde-hover);
-    transform: translateY(-2px);
-}
-
-.btn-secondary {
-    border: 1px solid var(--texto-gris);
-    color: var(--texto-blanco);
-    padding: 0.9rem 2rem;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: 700;
-    transition: var(--transicion);
-}
-
-.btn-secondary:hover {
-    background-color: rgba(255, 255, 255, 0.05);
-    color: var(--verde-gamer);
-    border-color: var(--verde-gamer);
-}
-
-/* Sección Quiénes Somos */
-.about-block {
-    display: grid;
-    grid-template-columns: 1.4fr 1fr;
-    gap: 3rem;
-    align-items: center;
-    margin-bottom: 4rem;
-}
-
-.about-text h4 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: var(--verde-gamer);
-}
-
-.about-text p {
-    color: var(--texto-gris);
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin-bottom: 1rem;
-}
-
-.stat-card {
-    background-color: var(--bg-tarjetas);
-    padding: 2.5rem;
-    border-radius: 8px;
-    border: 1px solid var(--borde);
-    text-align: center;
-    border-left: 4px solid var(--verde-gamer);
-}
-
-.stat-card h5 {
-    font-size: 3.5rem;
-    color: var(--verde-gamer);
-    font-weight: 800;
-}
-
-.stat-card p {
-    color: var(--texto-gris);
-    font-size: 0.95rem;
-    margin-top: 0.5rem;
-}
-
-/* Grid Misión y Visión */
-.grid-mv {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-}
-
-.mv-card {
-    background-color: var(--bg-secundario);
-    padding: 3rem 2.5rem;
-    border-radius: 6px;
-    border: 1px solid var(--borde);
-    transition: var(--transicion);
-}
-
-.mv-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--verde-gamer);
-}
-
-.mv-card .icon-box {
-    background-color: rgba(0, 255, 136, 0.1);
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 4px;
-    margin-bottom: 1.5rem;
-}
-
-.mv-card .icon-box i {
-    color: var(--verde-gamer);
-    font-size: 1.4rem;
-}
-
-.mv-card h4 {
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
-}
-
-.mv-card p {
-    color: var(--texto-gris);
-    line-height: 1.7;
-}
-
-/* Grid Valores */
-.grid-valores {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.5rem;
-}
-
-.valor-card {
-    background-color: var(--bg-tarjetas);
-    padding: 2rem;
-    border-radius: 6px;
-    border: 1px solid var(--borde);
-    transition: var(--transicion);
-}
-
-.valor-card:hover {
-    border-color: var(--verde-gamer);
-    background-color: rgba(0, 255, 136, 0.02);
-}
-
-.valor-card i {
-    color: var(--verde-gamer);
-    font-size: 2rem;
-    margin-bottom: 1.2rem;
-}
-
-.valor-card h5 {
-    font-size: 1.15rem;
-    margin-bottom: 0.7rem;
-}
-
-.valor-card p {
-    color: var(--texto-gris);
-    font-size: 0.9rem;
-    line-height: 1.6;
-}
-
-/* Tabla de Precios Avanzada */
-.table-notice {
-    background-color: rgba(0, 255, 136, 0.05);
-    border: 1px solid rgba(0, 255, 136, 0.2);
-    padding: 1rem;
-    border-radius: 4px;
-    color: var(--texto-gris);
-    margin-bottom: 1.5rem;
-    font-size: 0.95rem;
-}
-
-.table-notice i {
-    color: var(--verde-gamer);
-    margin-right: 6px;
-}
-
-.tabla-container {
-    width: 100%;
-    overflow-x: auto;
-    border-radius: 8px;
-    border: 1px solid var(--borde);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: var(--bg-secundario);
-    text-align: left;
-}
-
-th {
-    background-color: #161f28;
-    color: var(--verde-gamer);
-    padding: 1.2rem 1.5rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 0.85rem;
-    letter-spacing: 1px;
-    border-bottom: 2px solid var(--borde);
-}
-
-td {
-    padding: 1.2rem 1.5rem;
-    border-bottom: 1px solid var(--borde);
-    color: #e2e8f0;
-}
-
-tr:hover td {
-    background-color: var(--bg-tarjetas);
-}
-
-.price {
-    color: var(--verde-gamer);
-    font-weight: 700;
-}
-
-.total-row td {
-    background-color: rgba(0, 255, 136, 0.05);
-    border-top: 2px solid var(--verde-gamer);
-    font-size: 1.1rem;
-}
-
-.price-total {
-    color: var(--verde-gamer);
-    font-weight: 800;
-    font-size: 1.2rem;
-    text-shadow: 0 0 10px rgba(0,255,136,0.2);
-}
-
-/* Los 4 Pilares */
-.sub-title {
-    font-size: 1.6rem;
-    margin: 4rem 0 2rem;
-    text-align: center;
-}
-
-.grid-pilares {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1.5rem;
-}
-
-.pilar-card {
-    background-color: var(--bg-secundario);
-    padding: 2rem;
-    border-radius: 6px;
-    border: 1px solid var(--borde);
-    position: relative;
-}
-
-.pilar-card .num {
-    font-size: 3rem;
-    font-weight: 900;
-    color: rgba(0, 255, 136, 0.08);
-    position: absolute;
-    top: 10px;
-    right: 20px;
-}
-
-.pilar-card h5 {
-    font-size: 1.2rem;
-    margin-bottom: 0.8rem;
-    color: var(--texto-blanco);
-}
-
-.pilar-card p {
-    color: var(--texto-gris);
-    font-size: 0.95rem;
-    line-height: 1.6;
-}
-
-/* BOTÓN FLOTANTE DE WHATSAPP (CON ANIMACIÓN DE PULSO) */
-.whatsapp-floating-btn {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background-color: #25d366;
-    color: var(--texto-blanco);
-    border-radius: 50px;
-    padding: 1rem 1.6rem;
-    font-size: 1.05rem;
-    font-weight: 700;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    z-index: 9999;
-    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
-    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.3s;
-}
-
-.whatsapp-floating-btn i {
-    font-size: 1.5rem;
-}
-
-.whatsapp-floating-btn:hover {
-    transform: scale(1.08) translateY(-3px);
-    background-color: #20ba5a;
-}
-
-/* Footer */
-footer {
-    background-color: #07090c;
-    text-align: center;
-    padding: 3rem 2rem;
-    border-top: 1px solid var(--borde);
-    color: var(--texto-gris);
-    font-size: 0.9rem;
-}
-
-footer .credits {
-    margin-top: 0.5rem;
-    color: #4a5568;
-    font-size: 0.8rem;
-}
-
-/* Ajustes Responsivos para Pantallas de Celulares */
-@media (max-width: 768px) {
-    header {
-        padding: 1rem 1.5rem;
-        flex-direction: column;
-        gap: 1rem;
-    }
-    nav a {
-        margin-left: 0.8rem;
-        margin-right: 0.8rem;
-        font-size: 0.85rem;
-    }
-    .hero {
-        padding-left: 2rem;
-        padding-right: 2rem;
-        text-align: center;
-    }
-    .hero-content h2 {
-        font-size: 2.3rem;
-    }
-    .about-block {
-        grid-template-columns: 1fr;
-    }
-    .grid-mv {
-        grid-template-columns: 1fr;
-    }
-    .whatsapp-floating-btn span {
-        display: none; /* En celular se reduce al icono para no tapar pantalla */
-    }
-    .whatsapp-floating-btn {
-        padding: 1rem;
-        border-radius: 50%;
-    }
-}
-</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenEternalDragon - Armado y Optimización de PC Gamer</title>
+    <style>
+        :root {
+            --bg-principal: #0b0f12;
+            --bg-secundario: #12181b;
+            --verde-dragon: #2ecc71;
+            --verde-oscuro: #1b4d3e;
+            --texto-blanco: #ffffff;
+            --texto-gris: #a0aec0;
+            --neon-glow: #00ff87;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-principal);
+            color: var(--texto-blanco);
+            line-height: 1.6;
+        }
+
+        /* Barra de Navegación */
+        header {
+            background-color: rgba(18, 24, 27, 0.95);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid var(--verde-oscuro);
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--neon-glow);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            color: var(--texto-blanco);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: var(--verde-dragon);
+        }
+
+        /* Sección Hero */
+        .hero {
+            background: linear-gradient(rgba(11, 15, 18, 0.7), rgba(11, 15, 18, 0.9)), 
+                        url('https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: var(--texto-blanco);
+            text-shadow: 0 0 10px var(--verde-dragon);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            color: var(--texto-gris);
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            background: linear-gradient(45deg, var(--verde-oscuro), var(--verde-dragon));
+            color: white;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 15px var(--neon-glow);
+        }
+
+        /* Contenedor General de Secciones */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--verde-dragon);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Sección Quiénes Somos (Misión y Visión) */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            color: var(--neon-glow);
+            margin-bottom: 0.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .about-img img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(46, 204, 113, 0.2);
+        }
+
+        /* Sección de Tarjetas (Productos y Características) */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background-color: var(--bg-secundario);
+            padding: 2.5rem 2rem;
+            border-radius: 10px;
+            border: 1px solid #232d32;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--verde-dragon);
+        }
+
+        .feature-card h3 {
+            color: var(--neon-glow);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .feature-card .product-price {
+            display: block;
+            margin-top: 1rem;
+            font-weight: bold;
+            color: var(--neon-glow);
+        }
+
+        /* Los 4 Pilares Técnicos */
+        .pilares-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .pilar-card {
+            background-color: var(--bg-secundario);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-top: 3px solid var(--verde-dragon);
+        }
+
+        .pilar-card h4 {
+            color: var(--neon-glow);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        /* Bloque de Estadísticas */
+        .stats-banner {
+            background: linear-gradient(135deg, var(--bg-secundario) 0%, var(--verde-oscuro) 100%);
+            border: 1px solid var(--verde-dragon);
+            border-radius: 10px;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .stats-banner h3 {
+            font-size: 3rem;
+            color: var(--neon-glow);
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Sección Valores */
+        .valores-list {
+            background-color: var(--bg-secundario);
+            padding: 3rem;
+            border-radius: 10px;
+            border-left: 5px solid var(--verde-dragon);
+        }
+
+        .val-item {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #232d32;
+        }
+
+        .val-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .val-item strong {
+            color: var(--neon-glow);
+            font-size: 1.2rem;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        /* Sección Tabla de Presupuestos */
+        .table-responsive {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: var(--bg-secundario);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 1rem;
+        }
+
+        th, td {
+            padding: 1rem 1.5rem;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--verde-oscuro);
+            color: var(--texto-blanco);
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        tr {
+            border-bottom: 1px solid #232d32;
+        }
+
+        tr:last-child {
+            border-bottom: none;
+        }
+
+        tr:hover {
+            background-color: rgba(46, 204, 113, 0.05);
+        }
+
+        .price {
+            font-weight: bold;
+            color: var(--neon-glow);
+        }
+
+        /* Sección Contacto y Redes Sociales */
+        .contacto-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            background-color: var(--bg-secundario);
+            padding: 3rem;
+            border-radius: 10px;
+            border: 1px solid #232d32;
+        }
+
+        .contacto-info h3, .redes-info h3 {
+            color: var(--neon-glow);
+            margin-bottom: 1rem;
+        }
+
+        .contacto-info p, .redes-info p {
+            margin-bottom: 0.5rem;
+        }
+
+        .social-link {
+            display: inline-block;
+            margin-right: 15px;
+            color: var(--verde-dragon);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .social-link:hover {
+            color: var(--neon-glow);
+            text-decoration: underline;
+        }
+
+        /* ESTILOS DEL BOTÓN FLOTANTE DE WHATSAPP */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50px;
+            padding: 15px 25px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            z-index: 9999;
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.3s;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.06) translateY(-3px);
+            background-color: #20ba5a;
+        }
+
+        .whatsapp-icon {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+
+        /* LOGO FLOTANTE EXTRA (Opcional, dragón animado al lado opuesto) */
+        .dragon-float {
+            position: fixed;
+            bottom: 35px;
+            left: 30px;
+            font-size: 2rem;
+            background-color: rgba(18, 24, 27, 0.8);
+            padding: 10px;
+            border-radius: 50%;
+            border: 1px solid var(--verde-dragon);
+            z-index: 9999;
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @media (max-width: 768px) {
+            .about-grid, .contacto-container {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .nav-menu {
+                display: none;
+            }
+            .whatsapp-btn span {
+                display: none; /* En celular se comprime a solo el icono */
+            }
+            .whatsapp-btn {
+                padding: 15px;
+                border-radius: 50%;
+            }
+            .dragon-float {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dragon-float">🐉</div>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                🐉 GreenEternalDragon
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#quienes-somos">Quiénes Somos</a></li>
+                <li><a href="#valores">Valores</a></li>
+                <li><a href="#productos">Productos y Servicios</a></li>
+                <li><a href="#precios">Presupuestos de Hardware</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <h1>GREEN ETERNAL DRAGON</h1>
+        <p>Expertos en el diseño, armado y optimización de computadores Gamer de alto rendimiento.</p>
+        <a href="#productos" class="btn">Explorar Servicios</a>
+    </section>
+
+    <section id="quienes-somos" class="container">
+        <h2>Quiénes Somos</h2>
+        <div class="about-grid">
+            <div class="about-text">
+                <h3>Nuestra Empresa</h3>
+                <p>Somos una empresa dedicada a potenciar la experiencia de la comunidad gamer y profesional. Nos especializamos en seleccionar de manera rigurosa y experta cada componente para asegurar setups balanceados, estéticos y potentes.</p>
+                
+                <h3>Misión</h3>
+                <p>Nuestra misión es ofrecer tecnología de vanguardia y servicios de armado personalizado para ayudar a los jugadores y creadores de contenido a maximizar su rendimiento tecnológico sin pagar de más.</p>
+                
+                <h3>Visión</h3>
+                <p>Convertirnos para el año 2030 en la tienda líder en optimización de hardware a nivel nacional, siendo reconocidos por nuestra total transparencia, soporte al cliente y ensambles sin cuellos de botella.</p>
+            </div>
+            <div class="about-img">
+                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80" alt="Taller de Armado GreenEternalDragon">
+            </div>
+        </div>
+    </section>
+
+    <section id="valores" style="background-color: #0e1417;">
+        <div class="container">
+            <h2>Nuestros Valores Corporativos</h2>
+            <div class="valores-list">
+                <div class="val-item">
+                    <strong>1.- Respeto Comercial y Honestidad</strong>
+                    <p>Respetamos cada cotización y precio ofertado de manera transparente a nuestros clientes.</p>
+                </div>
+                <div class="val-item">
+                    <strong>2.- Innovación y Optimización</strong>
+                    <p>Nos mantenemos al día con las últimas actualizaciones de hardware para evitar fallas o cuellos de botella.</p>
+                </div>
+                <div class="val-item">
+                    <strong>3.- Compromiso y Garantía</strong>
+                    <p>Garantizamos el respaldo total de nuestros armados ante cualquier falla técnica o de fábrica.</p>
+                </div>
+                <div class="val-item">
+                    <strong>4.- Cobertura Logística Eficiente</strong>
+                    <p>Aseguramos despachos rápidos, seguros y con embalaje de alta protección a todo el país.</p>
+                </div>
+                <div class="val-item">
+                    <strong>5.- Asesoría Personalizada</strong>
+                    <p>Acompañamos al usuario durante todo el proceso de elección según su presupuesto disponible.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="productos" class="container">
+        <h2>Nuestros Productos y Servicios</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>1. Armado Personalizado</h3>
+                <p>Ensamblaje profesional de componentes con una gestión de cableado impecable para optimizar el flujo de aire y la estética.</p>
+                <span class="product-price">Desde $45.000 CLP</span>
+            </div>
+            <div class="feature-card">
+                <h3>2. Optimización de Software</h3>
+                <p>Configuración de BIOS, actualización de drivers y Overclocking seguro para exprimir cada FPS en tus videojuegos favoritos.</p>
+                <span class="product-price">Desde $25.000 CLP</span>
+            </div>
+            <div class="feature-card">
+                <h3>3. Pack Mantenimiento Pro</h3>
+                <p>Limpieza profunda de componentes, filtros de polvo y cambio de pasta térmica de alto rendimiento (Artic MX-6 o metal líquido).</p>
+                <span class="product-price">Desde $35.000 CLP</span>
+            </div>
+            <div class="feature-card">
+                <h3>4. Asesoría de Componentes</h3>
+                <p>Análisis completo de piezas para evitar cuellos de botella antes de que gastes tu dinero de manera incorrecta.</p>
+                <span class="product-price">¡Gratis con tu armado!</span>
+            </div>
+        </div>
+
+        <h3 style="text-align: center; margin-top: 5rem; margin-bottom: 2rem; color: var(--neon-glow);">Los 4 Imprescindibles de GreenEternalDragon</h3>
+        <div class="pilares-grid">
+            <div class="pilar-card">
+                <h4>Buena Combinación</h4>
+                <p>Evitamos el cuello de botella seleccionando procesadores y tarjetas gráficas equivalentes en potencia.</p>
+            </div>
+            <div class="pilar-card">
+                <h4>Gabinete Amplio</h4>
+                <p>Garantizamos espacio suficiente para la refrigeración y futuras actualizaciones de hardware.</p>
+            </div>
+            <div class="pilar-card">
+                <h4>Partes Económicas</h4>
+                <p>Buscamos ofertas inteligentes para maximizar el presupuesto sin sacrificar la durabilidad.</p>
+            </div>
+            <div class="pilar-card">
+                <h4>Cableado Ordenado</h4>
+                <p>Crucial para el correcto flujo interno de aire y para lucir un setup impecable.</p>
+            </div>
+        </div>
+
+        <div class="stats-banner">
+            <h3>68%</h3>
+            <p style="font-size: 1.3rem; font-weight: 600; color: white;">De los jugadores aseguran que un hardware optimizado mejora drásticamente su experiencia competitiva.</p>
+            <p
